@@ -171,21 +171,3 @@ DATABASES = {
 URL_ENV_EXPERIENCES=config('URL_ENV_EXPERIENCES')
 URL_ENV_DASHBOARD=config('URL_ENV_DASHBOARD')
 URL_ENV_COUSERS=config('URL_ENV_COUSERS')
-
-# e-mail
-# EMAIL_BACKEND = "anymail.backends.mailjet.EmailBackend"
-# DEFAULT_FROM_EMAIL = "lemes_vilarinho@yahoo.com.br"
-# SERVER_EMAIL = DEFAULT_FROM_EMAIL
-# ANYMAIL = {
-#     "MAILJET_API_KEY": config('MAILJET_API_KEY'),
-#     "MAILJET_SECRET_KEY": config('MAILJET_SECRET_KEY')
-# }
-# MAILJET_API_KEY = config('MAILJET_API_KEY')
-# MAILJET_SECRET_KEY = config('MAILJET_SECRET_KEY')
-
-EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
-API_KEY_SENDINBLUE = config('API_KEY_SENDINBLUE')
-SENDINBLUE_API_URL = "https://api.sendinblue.com/v3/"
-ANYMAIL = {
-    "SENDINBLUE_API_KEY": "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 " #config('API_KEY_SENDINBLUE'),
-}
