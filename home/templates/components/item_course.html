@@ -3,15 +3,15 @@
     <div class="container">
         <div class="row align-items-center justify-content-around flex-row-reverse">
             <div class="col-lg-10">
-                <div class="about-text"><h3 class="title-favorites">{{ dts.occupation }}</h3>
+                <div class="about-text"><h3 class="title-favorites">{{ dts.name }}</h3>
                     <h4 class="theme-color">{{ dts.company }}</h4>
                     <p style="text-align: justify; color: #000;">{{ dts.briefsummary }}</p>
-                    <h4 class="font-weight: 700;" style="color: #000;">Atividades:</h4>
+                    <h4 class="font-weight: 700;" style="color: #000;">Conteúdo:</h4>
                     {% for act in acts %}
                         <p style="font-size: 1rem; color: #000;">{{ act }}</p>
                     {% endfor %}
                     <div class="btn-bar">
-                        <a class="px-btn theme-t" href="/experiences/">Retornar</a>
+                        <a class="px-btn theme-t" href="/education/courses/">Retornar</a>
                     </div>
                 </div>
             </div>

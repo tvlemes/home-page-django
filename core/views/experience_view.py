@@ -20,7 +20,7 @@ def list_experiences(request):
     }
     return render(request,'experiences.html', context)
 
-def item_experience(request, id):
+def experience_item(request, id):
     db = requests.get(settings.URL_ENV_EXPERIENCES + id + '/')
     aux = db.json()
     acts = aux['activities'].split('\n')

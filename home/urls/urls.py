@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from core.views import index_view, experiences_view, avatar_view, dashboard_view, education_view
+from core.views import index_view, experience_view, avatar_view, dashboard_view, education_view, contact_view
 from django.conf import settings  
 from django.conf.urls.static import static  
 
@@ -12,8 +12,8 @@ urlpatterns = [
     path('', index_view.index),
 
     # Menu
-    path('experiences/', experiences_view.list_experiences),
-    path('experiences/<id>/', experiences_view.item_experience),
+    path('experiences/', experience_view.list_experiences),
+    path('experiences/<id>/', experience_view.experience_item),
 
     # Avatar
     path('signin_page/', avatar_view.signin_page),
@@ -25,8 +25,15 @@ urlpatterns = [
 
     # Education
     path('education/', education_view.education),
-    path('education/courses/', education_view.courses)
+    path('education/courses/', education_view.courses),
+    path('education/courses/<id>/', education_view.course_item),
 
+
+    # Contacts
+    path('contacts/', contact_view.contact),
+    path('contacts/send', contact_view.contact_send)
+
+    
 
     
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

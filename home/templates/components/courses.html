@@ -1,0 +1,39 @@
+<!-- Courses -->
+<div class="#">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <div id="main-content" class="file_manager">
+        <div class="container">
+            <div class="title">
+                <p class="title-favorites">Cursos complementares</p>
+                <div id="content">
+                    <div class="row">
+                        {% for dt in dts %}
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card" style="height: 18rem;">
+                                <div class="file">
+                                    <a href="/education/courses/{{ dt.id }}/">
+                                        <!-- Image    -->
+                                        <div class="image">
+                                            <img src="{{ dt.url_image }}" alt="img" height="60rem">
+                                        </div>
+                                        <!-- Description -->
+                                        <div class="file-name">
+                                            <small>
+                                                {{ dt.name }}
+                                            </small>
+                                            <small class="date text-muted">
+                                                Carga horária: {{ dt.workload }}
+                                            </small>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End card -->
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
