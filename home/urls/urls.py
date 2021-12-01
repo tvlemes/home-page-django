@@ -31,7 +31,6 @@ urlpatterns = [
 
     # Contacts
     path('contacts/', contact_view.contact),
-    path('contacts/send', contact_view.contact_send)
 
     
 
