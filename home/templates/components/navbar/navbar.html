@@ -6,15 +6,15 @@
         <div>
             <!-- Icon menu -->
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" title="Menu">
-                <span class="navbar-toggler-icon"></span>
+                aria-controls="offcanvasNavbar" title="Menu" style="border-color: transparent;">
+                <span class="navbar-toggler" style="border-color: transparent;"><img src="{% static 'icons/menu.svg' %}" alt="menu" style="border-color: transparent; float: left;"></span>
             </button>
             <!-- Text navbar -->
             <a class="navbar-brand spinner-loading" href="/" style="color: white;">Portfólio - Thiago Lemes</a>
         </div>
 
         <!-- Avatar -->
-        {% include 'components/avatar/avatar.html' %}
+        <!-- {% include 'components/avatar/avatar.html' %} -->
 
         <!-- Menu -->
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
@@ -35,7 +35,17 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     {% include 'components/navbar/items.html' %}
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: black;" href="/dashboard/" target="_blank"><img src="{% static 'icons/dashboard.svg' %}" width="25rem"
+                                style="margin-right: 20px;" alt="home"> Dashboard</a>
+                    </li>
                 </ul>
+                
 
             </div>
         </div>
