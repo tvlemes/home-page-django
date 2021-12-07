@@ -8,6 +8,10 @@
     margin-left: 1rem;
 }
 
+.navbar-toggler{
+    font-size: 1.8rem;
+}
+
 @media (max-width: 589px) {
     .navbar-brand {
         font-size: 1.0em;
